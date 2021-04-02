@@ -34,7 +34,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "922008661122.dkr.ecr.ap-southeast-1.amazonaws.com/cs301-springboot-booking",
+      "image": "922008661122.dkr.ecr.ap-southeast-1.amazonaws.com/cs301-springboot-booking:ecs-booking",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
