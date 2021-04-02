@@ -58,6 +58,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: ecs-booking-service
-        cluster: ecs-fargate-booking
+        service: ECS-BOOKING-SERVICE
+        cluster: booking-prod
         wait-for-service-stability: true
