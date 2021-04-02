@@ -57,11 +57,11 @@
   "placementConstraints": [],
   "memory": "512",
   "taskRoleArn": "arn:aws:iam::922008661122:role/ecsTaskExecutionRole",
-  "family": "fargate-task-definition",
+  "family": "booking-fargate-task-definition",
   "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "networkMode": "bridge",
+  "networkMode": "awsvpc",
   "cpu": "256"
 }
