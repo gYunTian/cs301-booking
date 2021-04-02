@@ -12,7 +12,12 @@ import org.springframework.web.bind.annotation.*;
 public class BookingController {
     @Autowired
     private BookingRepository bookingRepository;
-
+    
+    @GetMapping("/healthcheck")
+    public String healthcheck() {
+        return "Booking is up!";
+    }
+    
     @GetMapping("/{bookingCode}")
     public Booking findByBookingReferenceCode(@PathVariable("bookingCode")  String bookingCode) {
         return bookingRepository.findByBookingReferenceCode(bookingCode);
