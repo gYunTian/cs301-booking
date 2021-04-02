@@ -2,15 +2,14 @@
   "executionRoleArn": "arn:aws:iam::922008661122:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "logConfiguration": {
-                "logDriver": "awslogs",
-                "options": {
-                    "awslogs-group": "/ecs/fargate-task",
-                    "awslogs-region": "ap-southeast-1",
-                    "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": null
-      },
+       "logConfiguration": { 
+          "logDriver": "awslogs",
+          "options": { 
+             "awslogs-group" : "/ecs/booking-fargate-task-definition",
+             "awslogs-region": "ap-southeast-1",
+             "awslogs-stream-prefix": "ecs"
+          }
+       },
       "entryPoint": null,
       "portMappings": [
         {
