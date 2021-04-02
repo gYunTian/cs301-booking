@@ -1,6 +1,7 @@
 on:
   release:
-    branches: [ master ]
+    types: # This configuration does not affect the page_build event above
+      - created
   
 name: Deploy to Amazon ECS
     
