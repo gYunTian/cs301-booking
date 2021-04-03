@@ -40,17 +40,17 @@ public class Booking {
     @DynamoDBAttribute
     private Customer customer;
 
-    public Booking(String bookingReferenceCode, int numberOfNight, String startDate, String endDate, int numOfAdults, int numOfKids, String requestMessage, String roomType, Customer customer) {
-        this.bookingReferenceCode = bookingReferenceCode;
-        this.numberOfNight = numberOfNight;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.numOfAdults = numOfAdults;
-        this.numOfKids = numOfKids;
-        this.requestMessage = requestMessage;
-        this.roomType = roomType;
-        this.customer = customer;
-    }
+    // public Booking(String bookingReferenceCode, int numberOfNight, String startDate, String endDate, int numOfAdults, int numOfKids, String requestMessage, String roomType, Customer customer) {
+    //     this.bookingReferenceCode = bookingReferenceCode;
+    //     this.numberOfNight = numberOfNight;
+    //     this.startDate = startDate;
+    //     this.endDate = endDate;
+    //     this.numOfAdults = numOfAdults;
+    //     this.numOfKids = numOfKids;
+    //     this.requestMessage = requestMessage;
+    //     this.roomType = roomType;
+    //     this.customer = customer;
+    // }
 
     @JsonCreator
     public Booking(int numberOfNight, String startDate, String endDate, int numOfAdults, int numOfKids, String requestMessage, String roomType, Customer customer) {
