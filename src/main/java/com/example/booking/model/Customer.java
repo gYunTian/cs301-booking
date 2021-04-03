@@ -20,12 +20,13 @@ public class Customer {
     @DynamoDBAttribute
     private  String saluation;
 
-
     public Customer(String firstName, String lastName, String saluation) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.saluation = saluation;
     }
+
+
 
     public String getFirstName() {
         return this.firstName;

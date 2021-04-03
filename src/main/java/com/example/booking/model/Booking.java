@@ -64,6 +64,7 @@ public class Booking {
         this.customer = customer;
     }
 
+
     public String getBookingReferenceCode() {
         return this.bookingReferenceCode;
     }
