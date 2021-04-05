@@ -36,6 +36,9 @@ public class Booking {
     private String requestMessage;
     @DynamoDBAttribute
     private String roomType;
+    @DynamoDBAttribute
+    private Double totalPrice;
+
 
     @DynamoDBAttribute
     private Customer customer;
@@ -53,7 +56,7 @@ public class Booking {
     // }
 
     @JsonCreator
-    public Booking(int numberOfNight, String startDate, String endDate, int numOfAdults, int numOfKids, String requestMessage, String roomType, Customer customer) {
+    public Booking(int numberOfNight, String startDate, String endDate, int numOfAdults, int numOfKids, String requestMessage, String roomType, Double totalPrice, Customer customer) {
         this.numberOfNight = numberOfNight;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -61,6 +64,7 @@ public class Booking {
         this.numOfKids = numOfKids;
         this.requestMessage = requestMessage;
         this.roomType = roomType;
+        this.totalPrice = totalPrice;
         this.customer = customer;
     }
 
@@ -127,6 +131,14 @@ public class Booking {
 
     public void setRoomType(String roomType) {
         this.roomType = roomType;
+    }
+
+    public Double getTotalPrice() {
+        return this.totalPrice;
+    }
+
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     public Customer getCustomer() {

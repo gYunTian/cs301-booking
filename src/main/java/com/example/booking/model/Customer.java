@@ -20,11 +20,8 @@ public class Customer {
     @DynamoDBAttribute
     private  String saluation;
 
-    // public Customer(String firstName, String lastName, String saluation) {
-    //     this.firstName = firstName;
-    //     this.lastName = lastName;
-    //     this.saluation = saluation;
-    // }
+    @DynamoDBAttribute
+    private  String email;
 
     public String getFirstName() {
         return this.firstName;
@@ -48,6 +45,14 @@ public class Customer {
 
     public void setSaluation(String saluation) {
         this.saluation = saluation;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 }

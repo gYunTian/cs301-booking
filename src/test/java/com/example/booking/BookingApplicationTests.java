@@ -39,10 +39,10 @@ class BookingApplicationTests {
 	@Test
 	public void retrieveByBookingReferenceCode() throws Exception{
 		// given
-		given(bookingRepository.findByBookingReferenceCode("1c5118b3-d406-4441-b468-46e91b485000"))
-				.willReturn(new Booking("1c5118b3-d406-4441-b468-46e91b485000", 2, "20/7/2020", "28/7/2020", 2, 0, "-", "King roomType", new Customer("Robinb", "2John", "Mr")));
+		given(bookingRepository.findByBookingReferenceCode("ffcb5307-32c4-4c10-963a-1324d05886a3"))
+				.willReturn(new Booking("ffcb5307-32c4-4c10-963a-1324d05886a3", 3, "20/7/2020", "28/7/2020", 2, 0, "-", "King roomType", 12.2 ,new Customer("Mike", "Kyle", "Mr","kyle@gmail.com")));
 	
-		String bookingReferenceCode = "1c5118b3-d406-4441-b468-46e91b485000";
+		String bookingReferenceCode = "ffcb5307-32c4-4c10-963a-1324d05886a3";
 
 		// when
 		MockHttpServletResponse response = mvc.perform(
@@ -53,7 +53,7 @@ class BookingApplicationTests {
 		// then
 		assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
 		assertThat(response.getContentAsString()).isEqualTo(
-			jsonBooking.write(new Booking("1c5118b3-d406-4441-b468-46e91b485000", 2, "20/7/2020", "28/7/2020", 2, 0, "-", "King roomType", new Customer("Robinb", "2John", "Mr"))).getJson()
+			jsonBooking.write(new Booking("ffcb5307-32c4-4c10-963a-1324d05886a3", 3, "20/7/2020", "28/7/2020", 2, 0, "-", "King roomType", 12.2 ,new Customer("Mike", "Kyle", "Mr","kyle@gmail.com"))).getJson()
 		);
 	}
 
@@ -62,7 +62,7 @@ class BookingApplicationTests {
 		// when
 		MockHttpServletResponse response = mvc.perform(
 			post("/booking/").contentType(MediaType.APPLICATION_JSON).content(
-					jsonBooking.write(new Booking(2, "20/7/2020", "28/7/2020", 2, 0, "-", "King roomType", new Customer("May", "Root", "Ms"))).getJson()
+					jsonBooking.write(new Booking(3, "20/7/2020", "28/7/2020", 2, 0, "-", "King roomType", 12.2 ,new Customer("Mike", "Kyle", "Mr","kyle@gmail.com"))).getJson()
 			)).andReturn().getResponse();
 
 		// then
