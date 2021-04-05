@@ -34,8 +34,6 @@ public class Booking {
     private String requestMessage;
     @DynamoDBAttribute
     private String roomType;
-    @DynamoDBAttribute
-    private Float totalPrice;
 
     @DynamoDBAttribute
     private Customer customer;
@@ -103,14 +101,6 @@ public class Booking {
 
     public void setRoomType(String roomType) {
         this.roomType = roomType;
-    }
-
-    public Float getTotalPrice() {
-        return this.totalPrice;
-    }
-
-    public void setTotalPrice(Float totalPrice) {
-        this.totalPrice = totalPrice;
     }
 
     public Customer getCustomer() {
