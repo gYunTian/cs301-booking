@@ -19,4 +19,8 @@ public class Customer {
 
     @DynamoDBAttribute
     private  String saluation;
+
+    @DynamoDBAttribute
+    private  String email;
 }
+
