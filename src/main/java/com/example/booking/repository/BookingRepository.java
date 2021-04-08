@@ -44,7 +44,7 @@ public class BookingRepository{
             return "Booking Updated!";
         }
         else{
-            return "Sorry, There is no booking under this booking reference code.";
+            return "There is no booking under this booking reference code.";
         }
     }
 
